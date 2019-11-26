@@ -1,10 +1,9 @@
 import Sequelize, { Model } from 'sequelize';
 
-class Awards extends Model {
+class Award extends Model {
   static init(sequelize) {
     super.init(
       {
-        id: Sequelize.NUMBER,
         title: Sequelize.STRING,
         name: Sequelize.STRING,
         points: Sequelize.NUMBER,
@@ -17,4 +16,4 @@ class Awards extends Model {
   }
 }
 
-export default Awards;
+export default Award;

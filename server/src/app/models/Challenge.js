@@ -1,7 +1,5 @@
 import Sequelize, { Model } from 'sequelize';
 
-class Chalenge extends Model {
-  static
-}
+class Chalenge extends Model {}
 
 export default Chalenge;
