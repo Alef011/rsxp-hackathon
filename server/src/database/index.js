@@ -5,8 +5,9 @@ import databaseConfig from '../config/database';
 import User from '../app/models/User';
 import Content from '../app/models/Content';
 import Award from '../app/models/Award';
+import File from '../app/models/File';
 
-const models = [User, Content, Award];
+const models = [User, Content, Award, File];
 
 class Database {
   constructor() {
@@ -14,8 +15,6 @@ class Database {
     this.connection = new Sequelize(databaseConfig);
 
     this.init();
-
-    this.associate();
   }
 
   init() {
