@@ -3,7 +3,7 @@ export default {
   small: 12,
   medium: 14,
   big: 16,
-  veryBig: 18,
+  veryBig: 24,
 
   // OTHERS
 };
