@@ -5,7 +5,6 @@ class Award extends Model {
     super.init(
       {
         title: Sequelize.STRING,
-        name: Sequelize.STRING,
         points: Sequelize.NUMBER,
       },
       {

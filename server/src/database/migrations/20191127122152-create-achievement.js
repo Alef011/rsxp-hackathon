@@ -1,26 +1,24 @@
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('contents', {
+    return queryInterface.createTable('achievements', {
       id: {
         type: Sequelize.INTEGER,
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
       },
-      title: {
-        type: Sequelize.STRING,
-        allowNull: false,
-      },
-      url: {
-        type: Sequelize.STRING,
-        allowNull: false,
-      },
-      duration: {
-        type: Sequelize.STRING,
-        allowNull: false,
-      },
-      category: {
+      user_id: {
         type: Sequelize.INTEGER,
+        reference: { model: 'users', key: 'id' },
+        onUpdate: 'CASCADE',
+        onDelete: 'SET NULL',
+        allowNull: false,
+      },
+      content_id: {
+        type: Sequelize.INTEGER,
+        reference: { model: 'contents', key: 'id' },
+        onUpdate: 'CASCADE',
+        onDelete: 'SET NULL',
         allowNull: false,
       },
       award_id: {
@@ -42,6 +40,6 @@ module.exports = {
   },
 
   down: queryInterface => {
-    return queryInterface.dropTable('contents');
+    return queryInterface.dropTable('achievements');
   },
 };

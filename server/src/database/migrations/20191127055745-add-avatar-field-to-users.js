@@ -11,6 +11,5 @@ module.exports = {
 
   down: queryInterface => {
     return queryInterface.removeColumn('users', 'avatar_id');
-    // fazer migração e acrescentar avatar_id no insomnia
   },
 };
